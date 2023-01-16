@@ -1,0 +1,15 @@
+body {
+    color: #145;
+}
+
+div#heading-container {
+    height: 100vh;
+}
+
+a {
+    padding: 15px;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #145;
+}

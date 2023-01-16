@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Toto:wght@400;500;600;700&display=swap');
+
+
+/* Essential stuff */
+body {
+    font-family: 'Noto Serif Toto', serif;
+    color: #000;
+}
+
+#bee-tween {
+    height: 100px;
+}
+
+
+
+/* navigation */
+.da-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 14px;
+    margin-bottom: 30px;
+}
+
+.da-nav li {
+    display: inline;
+    padding: 15px;
+}
+
+
+
+/* links and URLs */
+/*
+a {
+    padding: 15px;
+}
+*/
+
+a:link, a:visited, a:hover, a:active {
+    color: #145;
+}
+
+a:link.btn, a:visited.btn, a:hover.btn, a:active.btn {
+    color: #fff;
+}

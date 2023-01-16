@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../styles/global.css">
+        <link rel="stylesheet" href="../../styles/articles.css">
+
+        <title>Colin Murphrey</title>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <!-- NAVBAR -->
+            <ul class="da-nav">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../portfolio.html">Portfolio</a></li>
+                <li><a href="../../aboutme.html">About Me</a></li>
+            </ul>
+        </div>
+
+
+        <!-- MAIN CONTENT -->
+        <div class="container">
+            
+            <a href="../../portfolio.html">...go back</a>
+
+            <h1>University of St. Thomas User Guide</h1>
+
+            <p id="last-modified"></p>
+            <hr>
+
+            <p>
+                Since I have began working at the University of St. Thomas, I have found that I have a talent for technical writing.
+                At the time of writing this, the Spring 2023 semester is about to begin.
+                Because of this, a couple of coworkers and I have began to work on a User Guide to assist students and faculty with basic IT help.
+                The document contains items such as assisting new users signing into their email for the first time, setting up multi-factor authentication, etc.
+            </p>
+            
+            <p>
+                For a downloadable version of this document, click <a class="downloads" href="./assets/User-Guide-Final--English-.pdf" target="_blank" download="Information-Technology-User-Guide-2023">here</a>.
+            </p>
+
+            
+
+            <div class="d-flex flex-column align-items-center justify-content-center" style="margin-bottom:50px;">
+                <embed src="./assets/User-Guide-Final--English-.pdf" width="800" height="500"></object>
+            </div>
+
+
+        </div>
+
+        
+
+        
+
+
+
+
+        <script>
+            const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+            const date = new Date(document.lastModified);
+            const month_string = month[date.getMonth()];
+            const day = date.getDate();
+            const year = date.getFullYear();
+            document.getElementById("last-modified").innerHTML = `Last modified: ${month_string} ${day}, ${year}`;
+        </script>
+    </body>
+</html>

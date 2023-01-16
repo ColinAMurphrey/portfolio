@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../styles/global.css">
+
+        <title>Colin Murphrey</title>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <!-- NAVBAR -->
+            <ul class="da-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+                <li><a href="../aboutme.html">About Me</a></li>
+            </ul>
+        </div>
+
+
+        <!-- MAIN CONTENT -->
+        <div class="container">
+            
+            <a href="../portfolio.html">...go back</a>
+
+            <h1>Dell Optiplex Server</h1>
+
+            <p id="last-modified"></p>
+            <hr>
+
+            <p>
+                Recently, I was able to acquire a Dell Optiplex from work so I can use it for projects.
+                My IT department began recycling hardware they didn't need anymore.
+                Naturally, given that I do a lot of projects with homemade servers, I asked about a Dell Optiplex that they seem to have forgotten about.
+                My boss agreed to letting me have it.
+                He gave me an empty SSD that I could install whatever operating system I wanted to onto it.
+            </p>
+        </div>
+
+        
+
+
+
+
+        <script>
+            const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+            const date = new Date(document.lastModified);
+            const month_string = month[date.getMonth()];
+            const day = date.getDate();
+            const year = date.getFullYear();
+            document.getElementById("last-modified").innerHTML = `${month_string} ${day}, ${year}`;
+        </script>
+    </body>
+</html>
