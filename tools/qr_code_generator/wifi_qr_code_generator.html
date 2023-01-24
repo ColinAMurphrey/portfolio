@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>QR Code Generator</title>
+
+        <script src="https://cdn.rawgit.com/amanuel/JS-HTML5-QRCode-Generator/master/qrcode.js"></script>
+        <script src="https://cdn.rawgit.com/amanuel/JS-HTML5-QRCODE-Generator/master/html5-qrcode.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../styles/global.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+            div#heading-container {
+                height: 100vh;
+            }
+
+            h1 {
+                /* font-size: 64px; */
+                border-bottom: 1px solid black;
+            }
+
+            h1, label, button {
+                display: flex;
+                width: 100%;
+                margin-bottom: 1rem;
+                justify-content: center;
+            }
+
+            label > * { flex: 1; }
+            label > span {
+                max-width: 8rem;
+                margin-right: 1rem;
+            }
+
+            @media print {
+                #print { display: none; }
+                label, input, select {
+                    border: none;
+                    background: none;
+                    font-size: 24px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- NAVBAR -->
+            <ul class="da-nav">
+                <li><a href="../.././index.html">Home</a></li>
+                <li><a href="../.././portfolio.html">Portfolio</a></li>
+                <li><a href="../.././tools/toolshome.html">Tools</a></li>
+                <li><a href="../.././aboutme.html">About Me</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" id="heading-container">
+            
+                <h1>Wi-Fi QR Code Generator</h1>
+                <p>Tip: press the 'tab' key to generate QR Code</p>
+
+                <form id="form">
+                    <label><span>SSID:</span><input id="ssid" placeholder="SSID"></label>
+                    <label><span>Password:</span><input id="password" placeholder="Password"></label>
+                    <label>
+                        <span>Encryption:</span>
+                        <select id="enc">
+                            <option>WPA</option>
+                            <option>WEP</option>
+                        </select>
+                    </label>
+                    <label><span>Is Hidden?</span><input type="checkbox" id="hidden"></label>
+
+                    <button class="button" id="print" onclick="window.print()">Print</button>
+                </form>
+
+                <div id="qrcode">
+                    <img>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            function updateQRCode() {
+                var ssid = document.getElementById("ssid").value;
+                var pw = document.getElementById("password").value;
+                var enc = document.getElementById("enc").value;
+                var hidden = document.getElementById("hidden").checked;
+                var qrcode = document.getElementById("qrcode");
+
+                var text = "WIFI:S:" + ssid + ";T:" + enc + ";P:" + pw + ";H:" + hidden + ";;";
+
+                qrcode.replaceChild(showQRCode(text), qrcode.lastChild);
+            };
+
+            document.getElementById("form").onchange = updateQRCode;
+        </script>
+    </body>
+</html>
